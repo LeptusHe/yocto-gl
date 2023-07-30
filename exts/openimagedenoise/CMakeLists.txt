@@ -16,12 +16,12 @@ if(APPLE)
 endif()
 endif(APPLE)
 if(MSVC)
-  target_include_directories(openimagedenoise INTERFACE "/Program\ Files/Intel/OpenImageDenoise/include/")
+  target_include_directories(openimagedenoise INTERFACE "C:/Program\ Files/Intel/OpenImageDenoise/include/")
   set_target_properties(openimagedenoise PROPERTIES
     IMPORTED_LINK_INTERFACE_LANGUAGES "CXX"
-    IMPORTED_LOCATION "/Program\ Files/Intel/OpenImageDenoise/bin/OpenImageDenoise.dll"
-    IMPORTED_IMPLIB   "/Program\ Files/Intel/OpenImageDenoise/lib/OpenImageDenoise.lib"
-    INTERFACE_INCLUDE_DIRECTORIES "/Program\ Files/Intel/OpenImageDenoise/include/")
+    IMPORTED_LOCATION "C:/Program\ Files/Intel/OpenImageDenoise/bin/OpenImageDenoise.dll"
+    IMPORTED_IMPLIB   "C:/Program\ Files/Intel/OpenImageDenoise/lib/OpenImageDenoise.lib"
+    INTERFACE_INCLUDE_DIRECTORIES "C:/Program\ Files/Intel/OpenImageDenoise/include/")
 endif(MSVC)
 if(UNIX AND NOT APPLE)
   target_include_directories(openimagedenoise INTERFACE /usr/local/include)

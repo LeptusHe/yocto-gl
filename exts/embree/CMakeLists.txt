@@ -17,12 +17,12 @@ if(APPLE)
 endif(APPLE)
 
 if(MSVC)
-  target_include_directories(embree INTERFACE "/Program\ Files/Intel/Embree3/include/")
+  target_include_directories(embree INTERFACE "C:/Program\ Files/Intel/Embree3/include/")
   set_target_properties(embree PROPERTIES
     IMPORTED_LINK_INTERFACE_LANGUAGES "CXX"
-    IMPORTED_LOCATION "/Program\ Files/Intel/Embree4/bin/embree4.dll"
-    IMPORTED_IMPLIB "/Program\ Files/Intel/Embree4/lib/embree4.lib"
-    INTERFACE_INCLUDE_DIRECTORIES "/Program\ Files/Intel/Embree4/include/")
+    IMPORTED_LOCATION "C:/Program\ Files/Intel/Embree4/bin/embree4.dll"
+    IMPORTED_IMPLIB "C:/Program\ Files/Intel/Embree4/lib/embree4.lib"
+    INTERFACE_INCLUDE_DIRECTORIES "C:/Program\ Files/Intel/Embree4/include/")
 endif(MSVC)
 
 if(UNIX AND NOT APPLE)
